@@ -37,6 +37,12 @@ function createWidget(
   const $lead = document.createElement('p')
   $lead.classList.add('lead')
   $lead.appendChild(document.createTextNode(config.lead))
+  const $about = document.createElement('p')
+  $about.classList.add('about')
+  $about.appendChild(document.createTextNode(config.about))
+  const $donate = document.createElement('h3')
+  $donate.classList.add('donate')
+  $donate.appendChild(document.createTextNode(config.donate))
 
   // Dropdown menu
   const $walletSelect = document.createElement('select')
@@ -105,6 +111,8 @@ function createWidget(
   $col2.appendChild(optionRouter[wallets[0][0]])
   $col1.appendChild($heading)
   $col1.appendChild($lead)
+  $col1.appendChild($about)
+  $col1.appendChild($donate)
   $col1.appendChild($walletSelect)
   $widget.appendChild($col1)
   $widget.appendChild($col2)
